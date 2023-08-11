@@ -44,7 +44,7 @@ export default function TableForm() {
           <div className="flex flex-col">
             <label htmlFor="Quantity">Quantité</label>
             <input
-              type="text"
+              type="number"
               name="quantity"
               id="quantity"
               placeholder="Quantité"
@@ -56,7 +56,7 @@ export default function TableForm() {
           <div className="flex flex-col">
             <label htmlFor="price">Prix</label>
             <input
-              type="text"
+              type="float"
               name="price"
               id="price"
               placeholder="Prix"
