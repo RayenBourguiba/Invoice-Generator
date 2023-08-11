@@ -21,7 +21,7 @@ export default function Table() {
               <tr className="h-10">
                 <td>{description}</td>
                 <td>{quantity}</td>
-                <td>{price}</td>
+                <td>{price} €</td>
                 <td>{amount} €</td>
               </tr>
             </tbody>
@@ -30,9 +30,17 @@ export default function Table() {
       </table>
 
       <div>
-        <h2 className="flex items-end justify-end text-gray-800 text-4xl font-bold">
-          {total.toLocaleString()} €
-        </h2>
+        <div className="flex items-end justify-end">        
+        <p>Sous-total: {total.toLocaleString()} € </p><br/>
+        </div>        
+        <div className="flex items-end justify-end">        
+        <p>T.V.A 20%: {total * 20 / 100} €</p><br/>
+        </div>
+        <div className="flex items-end justify-end">
+        <h4>TOTAL T.T.C: </h4>
+        <h2 className="text-gray-800 text-4xl font-bold">
+          {total * 120 / 100} € 
+        </h2></div>
       </div>
     </>
   );

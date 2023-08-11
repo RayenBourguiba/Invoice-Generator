@@ -1,5 +1,4 @@
 import { CreateAccount, LogIn } from "../buttons"
-import hero from "../images/invoicerv2.png"
 
 export default function Home() {
   return (
@@ -11,14 +10,6 @@ export default function Home() {
               <h1 className="text-slate-700 mb-5 text-4xl md:text-5xl font-bold text-center md:text-left">
                 Créer des factures
               </h1>
-              <article className="md:hidden">
-                <img
-                  src={hero}
-                  alt="Create Invoices Easily"
-                  title="Create Invoices Easily"
-                  className="block mx-auto rounded"
-                />
-              </article>
               <p className="text-slate-700 mt-5 md:mt-0 mb-5 text-center md:text-left">
                 Créez, téléchargez et imprimez facilement des factures pour vos clients.
               </p>

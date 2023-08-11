@@ -70,7 +70,7 @@ export default function StateContext({ children }) {
   }, [amount, price, quantity, setAmount]);
 
   const calculateTotal = () => {
-    const allItems = list.map((item) => item.price);
+    const allItems = list.map((item) => item.amount);
 
     setTotal(collect(allItems).sum());
   };
