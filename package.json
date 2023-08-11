@@ -1,5 +1,5 @@
 {
-  "name": "invoicer_v2",
+  "name": "facturation",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

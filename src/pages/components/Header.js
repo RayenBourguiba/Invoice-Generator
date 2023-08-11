@@ -47,7 +47,7 @@ export default function Header() {
             onClick={handleClick}
             className="text-sm uppercase transition-all duration-500 text-slate-700"
           >
-            {isOpen ? "Close" : "Menu"}
+            {isOpen ? "Fermer" : "Menu"}
           </button>
         </div>
       </header>
