@@ -6,13 +6,6 @@ import collect from "collect.js";
 export const State = createContext();
 
 export default function StateContext({ children }) {
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [bankName, setBankName] = useState("");
-  const [bankAccount, setBankAccount] = useState("");
-  const [website, setWebsite] = useState("");
   const [clientName, setClientName] = useState("");
   const [clientAddress, setClientAddress] = useState("");
   const [invoiceNumber, setInvoiceNumber] = useState("");
@@ -39,7 +32,7 @@ export default function StateContext({ children }) {
 
   useEffect(() => {
     if (window.innerWidth < width) {
-      alert("Place your phone in landscape mode for the best experience");
+      alert("Placez votre téléphone en mode paysage pour une meilleure expérience");
     }
   }, [width]);
 
@@ -76,28 +69,6 @@ export default function StateContext({ children }) {
     calculateAmount(amount);
   }, [amount, price, quantity, setAmount]);
 
-  /* Calculate total amount of items in table
-  This is the previous function to calculate the total amount of items in the table
-  But it has a bug where if you delete an item from the table, it still keeps the previous total amount.
-  The function after this comment uses `collect.js` which is a much better solution.  
-  */
-  // function CalcSum() {
-  //   let rows = document.querySelectorAll(".amount");
-  //   let sum = 0;
-
-  //   for (let i = 0; i < rows.length; i++) {
-  //     if (rows[i].className === "amount") {
-  //       sum += isNaN(rows[i].innerHTML) ? 0 : parseInt(rows[i].innerHTML);
-  //       setTotal(sum);
-  //     }
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   CalcSum();
-  // }, [price, quantity]);
-
-  // Use collect.js to calculate the total amount of items in the table. This is a much better function than the commented one above.
   const calculateTotal = () => {
     const allItems = list.map((item) => item.price);
 
@@ -126,20 +97,6 @@ export default function StateContext({ children }) {
   };
 
   const context = {
-    name,
-    setName,
-    address,
-    setAddress,
-    email,
-    setEmail,
-    phone,
-    setPhone,
-    bankName,
-    setBankName,
-    bankAccount,
-    setBankAccount,
-    website,
-    setWebsite,
     clientName,
     setClientName,
     clientAddress,

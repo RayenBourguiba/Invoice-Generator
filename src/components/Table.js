@@ -10,9 +10,9 @@ export default function Table() {
         <thead>
           <tr className="bg-gray-100 p-1">
             <td className="font-bold">Description</td>
-            <td className="font-bold">Quantity</td>
-            <td className="font-bold">Price</td>
-            <td className="font-bold">Amount</td>
+            <td className="font-bold">Quantité</td>
+            <td className="font-bold">Prix</td>
+            <td className="font-bold">Total HT</td>
           </tr>
         </thead>
         {list.map(({ id, description, quantity, price, amount }) => (
@@ -22,7 +22,7 @@ export default function Table() {
                 <td>{description}</td>
                 <td>{quantity}</td>
                 <td>{price}</td>
-                <td>{amount}</td>
+                <td>{amount} €</td>
               </tr>
             </tbody>
           </React.Fragment>
@@ -31,7 +31,7 @@ export default function Table() {
 
       <div>
         <h2 className="flex items-end justify-end text-gray-800 text-4xl font-bold">
-          Kshs. {total.toLocaleString()}
+          {total.toLocaleString()} €
         </h2>
       </div>
     </>

@@ -29,12 +29,12 @@ export default function TableForm() {
 
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col md:mt-16">
-          <label htmlFor="description">Item description</label>
+          <label htmlFor="description">Description</label>
           <input
             type="text"
             name="description"
             id="description"
-            placeholder="Item description"
+            placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
@@ -42,31 +42,31 @@ export default function TableForm() {
 
         <div className="md:grid grid-cols-3 gap-10">
           <div className="flex flex-col">
-            <label htmlFor="quantity">Quantity</label>
+            <label htmlFor="Quantity">Quantité</label>
             <input
               type="text"
               name="quantity"
               id="quantity"
-              placeholder="Quantity"
+              placeholder="Quantité"
               value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
             />
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="price">Price</label>
+            <label htmlFor="price">Prix</label>
             <input
               type="text"
               name="price"
               id="price"
-              placeholder="Price"
+              placeholder="Prix"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="amount">Amount</label>
+            <label htmlFor="amount">Montant</label>
             <p>{amount}</p>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function TableForm() {
           type="submit"
           className="bg-blue-500 mb-5 text-white font-bold py-2 px-8 rounded hover:bg-blue-600 hover:text-white transition-all duration-150 hover:ring-4 hover:ring-blue-400"
         >
-          {isEditing ? "Finish Editing" : "Add Table Item"}
+          {isEditing ? "Finir l'édition" : "Ajouter un élément au tableau"}
         </button>
       </form>
 
@@ -84,9 +84,9 @@ export default function TableForm() {
         <thead>
           <tr className="bg-gray-100 p-1">
             <td className="font-bold">Description</td>
-            <td className="font-bold">Quantity</td>
-            <td className="font-bold">Price</td>
-            <td className="font-bold">Amount</td>
+            <td className="font-bold">Quantité</td>
+            <td className="font-bold">Prix</td>
+            <td className="font-bold">Montant</td>
           </tr>
         </thead>
         {list.map(({ id, description, quantity, price, amount }) => (
@@ -116,7 +116,7 @@ export default function TableForm() {
 
       <div>
         <h2 className="flex items-end justify-end text-gray-800 text-4xl font-bold">
-          Kshs. {total.toLocaleString()}
+          {total.toLocaleString()} € 
         </h2>
       </div>
     </>

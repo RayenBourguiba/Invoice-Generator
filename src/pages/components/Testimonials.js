@@ -1,8 +1,4 @@
 import { useState } from "react"
-import { testimonials } from "../../data/data"
-
-export default function Testimonials() {
-  const [cards] = useState(testimonials)
 
   return (
     <>
@@ -17,10 +13,6 @@ export default function Testimonials() {
                   <h4 className="text-xl text-white">{name}</h4>
                   <p className="text-xl font-bold text-white">{company}</p>
                 </div>
-              </article>
-
-              <article>
-                <a href="https://twitter.com/tsbsankara">{icon}</a>
               </article>
             </div>
           </article>
